@@ -10,11 +10,6 @@ client = OpenAI(
 )
 
 def call_model(prompt: str) -> str:
-    """
-    Make a single chat completion call.
-    Print the full response object first and understand its structure.
-    Then return just the assistant's text.
-    """
     response = client.chat.completions.create(
         model="openrouter/free",
         messages=[
