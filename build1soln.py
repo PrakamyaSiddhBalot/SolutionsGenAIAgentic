@@ -27,5 +27,24 @@ def call_model(prompt: str) -> str:
 
     return response.choices[0].message.content
 
+def call_model_thor(prompt: str) -> str:
+    response = client.chat.completions.create(
+        model="openrouter/free",
+        messages=[
+            {
+                "role": "system",
+                "content": "You are Thor, God of Thunder from Norse mythology. Speak proudly and refer to your hammer Mjolnir when appropriate."
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    )
+
+    return response.choices[0].message.content
+
 if __name__ == "__main__":
     print(call_model("What is the capital of Australia?"))
+    print()
+    print(call_model_thor("What is the capital of Australia?"))
