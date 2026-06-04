@@ -16,15 +16,21 @@ def call_model(prompt: str) -> str:
     Then return just the assistant's text.
     """
     response = client.chat.completions.create(
-        model="deepseek/deepseek-v4-flash:free",
+        model="openrouter/free",
         messages=[
             {"role": "user", "content": prompt}
         ],
     )
-    # TODO: try adding a system prompt with different instructions and guidelines
-    # TODO: inspect `response` before you extract anything from it
-    # What's in response.choices? What's in response.usage?
-    pass
+    print("FULL RESPONSE:")
+    print(response)
+
+    print("\nUSAGE:")
+    print(response.usage)
+
+    print("\nCHOICES:")
+    print(response.choices)
+
+    return response.choices[0].message.content
 
 if __name__ == "__main__":
     print(call_model("What is the capital of Australia?"))
