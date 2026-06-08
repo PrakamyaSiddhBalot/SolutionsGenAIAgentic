@@ -34,6 +34,7 @@ client = OpenAI(
 )
 
 MODEL = "openrouter/free"
+# I used the openrouter/free model because the deepseek free model is no longer available. Instead, we can use "deepseek/deepseek-v4-flash".
 
 # ---------------------------------------------------------------------------
 # Tool schemas (the contract between you and the model)
