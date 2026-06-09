@@ -1,6 +1,6 @@
 # SUBMISSION.md
 
-## ResearchBot – Week 2 Project Reflection
+## ResearchBot – Week 2 Project 
 
 For this project, I built a research assistant that can search the web, read webpages, and look through research papers using AlphaXiv. The final version includes a terminal-based interface where users can chat with the assistant, see which tools it is using, and ask research questions in a more interactive way. It was interesting to see how a simple chatbot could gradually evolve into something that actually gathers information before answering.
 
