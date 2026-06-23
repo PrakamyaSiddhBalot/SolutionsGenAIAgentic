@@ -993,7 +993,7 @@ class Agent:
 
     def _run_loop(self):
 
-        for _ in range(30):
+        for _ in range(75):
 
             try:
 
