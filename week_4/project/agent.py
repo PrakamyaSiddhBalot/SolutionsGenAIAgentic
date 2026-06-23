@@ -6,20 +6,27 @@ import argparse
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from web import web_search, web_fetch
-from papers import paper_search, read_paper
-from files import (
+from tools.web import web_search, web_fetch
+from tools.papers import paper_search, read_paper
+
+from tools.files import (
     read_file,
     write_file,
     list_files,
     edit_file
 )
-from week4build1 import run_command
-from week4build2 import grep, list_definitions
-from week4build3 import add_todos, get_todos, mark_todo
-from week4build1 import TOOLS as COMMAND_TOOLS
-from week4build2 import TOOLS as SEARCH_TOOLS
-from week4build3 import TOOLS as TODO_TOOLS
+
+from tools.exec import run_command
+from tools.search import grep, list_definitions
+from tools.plan import (
+    add_todos,
+    get_todos,
+    mark_todo
+)
+
+from tools.exec import TOOLS as COMMAND_TOOLS
+from tools.search import TOOLS as SEARCH_TOOLS
+from tools.plan import TOOLS as TODO_TOOLS
 
 load_dotenv()
 
